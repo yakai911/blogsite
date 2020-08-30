@@ -11,7 +11,7 @@ import PageRenderer from "./page-renderer";
 
 function App() {
   const user = {
-    name: "Leo",
+    name: "Leo Messi",
   };
 
   return (
