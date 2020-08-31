@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Avatar } from "antd";
+const icon = require("../../assets/images/avatar.png");
 
 const navLinks = [
   {
@@ -27,7 +28,10 @@ export default function Navigation({ user }) {
   return (
     <nav className="site-navigation">
       <span className="menu-title">Haiku Cigarette</span>
-      <div className={`menu-content-container ${menuActive && "active"}`}>
+      <div
+        className={`menu-content-container ${menuActive && "active"}`}
+        onMouseLeave={() => setMenuActive(false)}
+      >
         <ul>
           {navLinks.map((link, index) => (
             <li key={index}>
@@ -36,10 +40,7 @@ export default function Navigation({ user }) {
           ))}
         </ul>
         <span className="menu-avtar-container">
-          <Avatar
-            src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
-            size={38}
-          />
+          <Avatar src={icon} size={38} />
           <span className="menu-avtar-name">{`${user.name}`}</span>
         </span>
       </div>
