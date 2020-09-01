@@ -2,7 +2,6 @@ import React from "react";
 import { categoryColors } from "./styles";
 
 export default function TagRow({ tags }) {
-  console.log(tags);
   return (
     <div className="tags-container">
       {tags.map((tag, ind) => (
