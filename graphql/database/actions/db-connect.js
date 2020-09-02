@@ -1,3 +1,3 @@
 const knex = require("../mysql");
 
-knex.raw("show schemas").then((res, err) => console.log(res));
+knex.raw("show schemas").then((res) => console.log(res));
