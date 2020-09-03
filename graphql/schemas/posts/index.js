@@ -19,8 +19,8 @@ const getPostsWithAuthors = (cb) => async (parent, args, ctx, info) => {
 
   return posts.map(({ categories, author_id, ...rest }, index) => ({
     categories: categories.split(","),
-    author: authorMap[author_id],
     ...rest,
+    author: authorMap[author_id],
   }));
 };
 

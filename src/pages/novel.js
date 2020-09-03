@@ -5,11 +5,13 @@ import withTitle from "../components/common/with-title";
 import PostGrid from "../components/common/post-grid";
 import { GET_POSTS_BY_CATEGORIES_QUERY } from "../queries/posts";
 
-const catIds = [1, 2, 3, 4, 5];
+const catIds = [2];
 
 export default function Novel({ history }) {
   const { data, error } = useQuery(GET_POSTS_BY_CATEGORIES_QUERY, {
-    variables: catIds,
+    variables: {
+      cat_ids: catIds,
+    },
   });
 
   if (error) {
@@ -18,6 +20,6 @@ export default function Novel({ history }) {
 
   return withTitle(
     "小说",
-    data?.posts ? <PostGrid post={data.posts} /> : "正在加载..."
+    data?.posts ? <PostGrid posts={data.posts} /> : "正在加载..."
   );
 }

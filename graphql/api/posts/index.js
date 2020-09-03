@@ -56,11 +56,12 @@ module.exports = {
     return qry
       .then((data) => {
         if (category_ids) {
-          return data.filter((post) => {
-            post.cat_ids &&
-              intersection(post.cat_ids.split(",").map(parseInt, category_ids))
-                .length;
-          });
+          return data.filter(
+            (post) =>
+              post.cat_ids &&
+              intersection(post.cat_ids.split(",").map(parseInt), category_ids)
+                .length
+          );
         }
         return data;
       })
