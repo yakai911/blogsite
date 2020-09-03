@@ -29,17 +29,23 @@ VALUES
     ('novel', '源自梦境片段的小说');
 
 INSERT INTO blog_posts
-    (author_id,title,text,image,active,keyword1,keyword2,bg_src,bg_type)
+    (author_id,title,description,text,image,active,keyword1,keyword2,bg_src,bg_type)
 VALUES
-    (1, '吞咽', '这故事中的恶心像履带里嵌着泥土 恐惧让叙述变得扁平，无法去叙述', 'swallow', '1', 'poemtry', 'dream', 'poetry3', '.jpg'),
-    (1, '拍摄美洲狮', '我拿着手机，在一间石棉瓦房附近，这是次田野调查。在不折不扣的田野里，我用手机开着照相模式，正发愁该拍些什么照片，突然有张嘴出现在了取景框里，极其缓慢露出它粉红色的、磨砂质地的舌头。', 'lion', '1', 'novel', 'dream', 'lion', '.png');
+    (1, '吞咽', '这故事中的恶心像履带里嵌着泥土 恐惧让叙述变得扁平，无法去叙述', '', 'poetry3.jpg', '1', 'poetry', 'dream', 'poetry3', '.jpg'),
+    (1, '拍摄美洲狮', '我拿着手机，在一间石棉瓦房附近，这是次田野调查。在不折不扣的田野里，我用手机开着照相模式，正发愁该拍些什么照片，突然有张嘴出现在了取景框里，极其缓慢露出它粉红色的、磨砂质地的舌头。', '', 'lion.png', '1', 'novel', 'dream', 'lion', '.png');
 
 INSERT INTO blog_post_comments
     (post_id,author_id,comment)
 VALUES
-    (1, 1, 'not bad!'),
-    (1, 1, 'a dream');
+    (1, 1, 'Not bad!'),
+    (1, 1, 'A dream?');
 
+INSERT INTO blog_post_categories
+    (post_id,category_id)
+VALUES
+    (1, 1),
+    (2, 2);
+ 
 
 
 

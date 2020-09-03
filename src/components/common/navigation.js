@@ -13,6 +13,18 @@ const navLinks = [
     path: "/blog",
   },
   {
+    title: "algos",
+    path: "/algos",
+  },
+  {
+    title: "小说",
+    path: "/novel",
+  },
+  {
+    title: "诗歌",
+    path: "/poetry",
+  },
+  {
     title: "关于",
     path: "/about",
   },

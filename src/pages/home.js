@@ -1,6 +1,6 @@
 import React from "react";
 import { PostMasonry, MasonryPost, PostGrid } from "../components/common";
-import novel from "../assets/mocks/novel";
+import trending from "../assets/mocks/trending";
 import featured from "../assets/mocks/featured";
 
 export default function Home() {
@@ -34,9 +34,9 @@ export default function Home() {
     });
   };
 
-  const recentPosts = [...novel, ...featured, ...featured];
+  const recentPosts = [...trending, ...featured, ...featured];
 
-  mergeStyles(novel, novelConfig);
+  mergeStyles(trending, novelConfig);
   mergeStyles(featured, featuredConfig);
 
   const lastFeatured = featured.pop();
@@ -62,7 +62,7 @@ export default function Home() {
 
       <section className="container">
         <div className="row">
-          <PostMasonry posts={novel} columns={3} />
+          <PostMasonry posts={trending} columns={3} />
         </div>
       </section>
     </main>

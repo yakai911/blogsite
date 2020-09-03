@@ -6,6 +6,8 @@ IF NOT EXISTS blog_posts
 (12) NOT NULL,
     title VARCHAR
 (100) NOT NULL,
+    description VARCHAR
+(200) NOT NULL,
     text MEDIUMTEXT NOT NULL,
     keyword1 VARCHAR
 (50) NOT NULL,
@@ -19,13 +21,13 @@ IF NOT EXISTS blog_posts
 (10) NOT NULL,
     active TINYINT
 (1) NOT NULL DEFAULT 0,
-    update_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     INDEX bpauthor_ind
 (author_id),
     CONSTRAINT `fk_bpauthor` FOREIGN KEY
 (`author_id`)
-    REFERENCES users
+    REFERENCES `users`
 (`id`)
     ON
 DELETE CASCADE

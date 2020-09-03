@@ -8,17 +8,17 @@ IF NOT EXISTS blog_post_likes
     UNIQUE KEY
 (post_id,author_id),
     CONSTRAINT `fk_bplpost` FOREIGN KEY
-(post_id)
-    REFERENCES blog_posts
-(id)
+(`post_id`)
+    REFERENCES `blog_posts`
+(`id`)
     ON
 DELETE CASCADE
     ON
 UPDATE CASCADE,
     CONSTRAINT `fk_bplauthor` FOREIGN KEY
-(author_id)
-    REFERENCES users
-(id)
+(`author_id`)
+    REFERENCES `users`
+(`id`)
     ON
 DELETE CASCADE
     ON

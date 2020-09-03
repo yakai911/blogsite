@@ -15,7 +15,7 @@ IF NOT EXISTS blog_post_categories
 DELETE CASCADE
     ON
 UPDATE CASCADE,
-    CONSTRAINT `fk_bpcategory` FOREIGN KEY
+    CONSTRAINT `fk_bpcatcategory` FOREIGN KEY
 (`category_id`)
     REFERENCES `blog_categories`
 (`id`)

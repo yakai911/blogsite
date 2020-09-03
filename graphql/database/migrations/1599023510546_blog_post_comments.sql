@@ -14,17 +14,17 @@ IF NOT EXISTS blog_post_comments
     INDEX bpcpost_ind
 (post_id),
     CONSTRAINT `fk_bpcauthor` FOREIGN KEY
-(author_id)
-    REFERENCES users
-(id)
+(`author_id`)
+    REFERENCES `users`
+(`id`)
     ON
 DELETE CASCADE
     ON
 UPDATE CASCADE,
     CONSTRAINT `fk_bpcpost` FOREIGN KEY
-(post_id)
-    REFERENCES blog_posts
-(id)
+(`post_id`)
+    REFERENCES `blog_posts`
+(`id`)
     ON
 DELETE CASCADE
     ON

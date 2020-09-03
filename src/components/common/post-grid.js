@@ -12,7 +12,7 @@ export default function PostGrid({ posts }) {
     const firstIndex = lastIndex - pageSize;
 
     return posts.slice(firstIndex, lastIndex);
-  }, [current, pageSize]);
+  }, [current, pageSize, posts]);
 
   useEffect(() => {
     window.scroll({
