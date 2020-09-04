@@ -9,7 +9,7 @@ export default [
     image: "pic1.png",
   },
   {
-    title: "驴",
+    title: "驴脸",
     date: moment().format("MMMM,DD,YYYY"),
     categories: ["novel"],
     link: "#",
